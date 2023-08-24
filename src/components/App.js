@@ -10,7 +10,7 @@ const App = () => {
       if(username==='' || password===''){
          setError('Both username and password are required.')
       }
-      setError('')
+      setError('');
     }
   return (
     
@@ -23,7 +23,9 @@ const App = () => {
          <label>Password:</label><input type="password" onChange={(e)=> setPassword(e.target.value)}/>
        </div>
        <button onClick={handleLogin}>Login</button>
-       {error && <p id='errorMessage'>{error}</p>}
+       <div id='errorMessage'>
+       {error && <p >{error}</p>}
+       </div>
 
 
     </div>
